@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController">
+            <connections>
+                <outlet property="tableViewSettings" destination="Tj1-wN-B5j" id="B3p-jJ-Ocy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIl-Ev-d4x">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更多" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sC6-CY-Ok8">
+                            <rect key="frame" x="87" y="34" width="146" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="3Xc-qs-agA"/>
+                                <constraint firstAttribute="width" constant="146" id="v8m-e0-4RL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="sC6-CY-Ok8" firstAttribute="top" secondItem="SIl-Ev-d4x" secondAttribute="top" constant="34" id="J90-JZ-xAO"/>
+                        <constraint firstAttribute="height" constant="64" id="N34-Dk-bEt"/>
+                        <constraint firstItem="sC6-CY-Ok8" firstAttribute="centerX" secondItem="SIl-Ev-d4x" secondAttribute="centerX" id="VvU-4o-6dm"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tj1-wN-B5j">
+                    <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="hbD-Sq-0W9"/>
+                        <outlet property="delegate" destination="-1" id="13Y-M4-yMZ"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Tj1-wN-B5j" firstAttribute="top" secondItem="SIl-Ev-d4x" secondAttribute="bottom" id="6J7-Dq-duX"/>
+                <constraint firstAttribute="trailing" secondItem="Tj1-wN-B5j" secondAttribute="trailing" id="DfU-AO-Ixg"/>
+                <constraint firstAttribute="bottom" secondItem="Tj1-wN-B5j" secondAttribute="bottom" constant="44" id="FNW-gb-LhP"/>
+                <constraint firstItem="SIl-Ev-d4x" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OuR-2A-LeB"/>
+                <constraint firstItem="Tj1-wN-B5j" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PLR-W9-tNO"/>
+                <constraint firstAttribute="trailing" secondItem="SIl-Ev-d4x" secondAttribute="trailing" id="TQF-zq-qND"/>
+                <constraint firstItem="Tj1-wN-B5j" firstAttribute="top" secondItem="SIl-Ev-d4x" secondAttribute="bottom" id="elb-i9-2I0"/>
+                <constraint firstItem="SIl-Ev-d4x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="faS-MG-ACR"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="133" y="86"/>
+        </view>
+    </objects>
+</document>

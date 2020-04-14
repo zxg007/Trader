@@ -1,0 +1,612 @@
+@charset "utf-8";
+/*
+ * By jasonshan@tencent.com
+ * date 2013.9.18
+ * v  1.0
+ * 适配首页样式
+ */
+/*reset*/
+body, div, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, iframe, input, textarea, select, label, article, aside, footer, header, menu, nav, section, time, audio, video {
+	margin: 0;
+	padding: 0;
+}
+article, aside, footer, header, hgroup, nav, section, audio, canvas, video, img {
+	display: block;
+}
+body {
+	font-size: 100%;
+	font-family: Helvetica, STHeiti, Droid Sans Fallback;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+textarea {
+	resize: none;
+}
+iframe, img {
+	border: 0;
+}
+img {
+	max-width: 100%;
+	margin: 0 auto;
+	display: block;
+	vertical-align: middle;
+}
+ul, ol {
+	list-style: none;
+}
+input, select, textarea {
+	outline: 0;
+	-webkit-user-modify: read-write-plaintext-only;
+}
+table {
+	border-collapse:collapse;
+}
+.clear {
+	clear: both;
+	height: 0;
+	font-size: 0;
+	overflow: hidden;
+}
+.none {
+	display: none;
+}
+input {
+	-webkit-appearance: none;
+}
+a {
+	text-decoration: none;
+	color: #333;
+}
+/*E全局样式 2014/7/17*/
+html {
+	overflow: hidden;
+}
+body, .global {
+	background: #fafafa;
+	overflow: hidden
+}
+.global {
+	/*min-width: 320px;*/
+	width: 100%;
+	overflow: hidden;
+}
+/*S logo和导航*/
+.header {
+	overflow: hidden;
+	height: 43px;
+	width: 210px;
+	background: url(../image/logo.jpg) no-repeat;
+	-webkit-background-size: 210px 43px;
+	-moz-background-size: 210px 43px;
+	-o-background-size: 210px 43px;
+	background-size: 210px 43px;
+}
+.nav {
+	height: 2em;
+	background: #fff;
+	border-top: 2px solid #ce261d;
+	border-bottom: 2px solid #e6e6e6;
+}
+.nav a {
+	display: block;
+	float: left;
+	width:25%;
+	line-height: 2em;
+	text-align: center;
+}
+ .nav .cur {
+	color: #fff;
+	background: #ce261d;
+}
+/*E logo和导航*/
+.concent_b {
+	overflow-y: auto;
+	width: 100%;
+	background: #e6e6e6;
+	position:absolute;
+	top:79px;
+	bottom:0;
+}
+/*S 图片切换区域*/
+.scroll {
+	position: relative;
+	overflow: hidden;
+}
+.slide_01 {
+	margin: 0 auto;
+}
+.mod_01 {
+	float: left;
+	width: 600px;
+}
+.mod_01 img {
+	display: block;
+	width: 600px;
+	height: 132px;
+	position: relative;
+}
+.gallery_title {
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	background: #999;
+	z-index: 999;
+	position: relative;
+	margin-top: -30px;
+	text-align: center;
+	color: #fafafa;
+	font-weight: normal;
+	font-family: "黑体";
+	text-shadow: 1px 1px 1px #000;
+	font-size: 0.875em;
+	background-color: rgba(0,0,0,0);
+	background: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.9));
+	background: -webkit-gradient(linear, top, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.9)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.9));
+	background: -o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.9));
+}
+.dotModule_new {
+	padding: 0 5px;
+	height: 15px;
+	line-height: 15px;
+	background: #fff;
+}
+#slide_01_dot {
+	text-align: center;
+}
+#slide_01_dot span {
+	display: inline-block;
+	margin: 0 3px;
+	width: 6px;
+	height: 6px;
+	vertical-align: middle;
+	background: #ddd;
+	border-radius: 6px;
+}
+#slide_01_dot .selected {
+	background: #ce261d;
+}
+/*E 图片切换区域*/
+/*.banner {
+	height:132px;
+	width: 100%;
+	overflow:hidden;
+	position:relative;
+}
+.banner ul {
+	width:300%;
+	height:132px;
+	position:absolute;
+	top:0;
+	left:0;
+	}
+.banner li {
+	float:left;
+	width:33.3333%;
+	}
+.banner li div{
+	width:100%;
+	height:132px;
+	overflow: hidden;
+	}
+.banner li .img_one{
+	background:url(../image/banner.jpg) no-repeat center;
+	-webkit-background-size:556px 132px;
+	-moz-background-size: 556px 132px;
+	-o-background-size: 556px 132px;
+	background-size: 556px 132px;
+	}
+.banner li .img_two{
+	background:url(../image/banner1.jpg) no-repeat center;
+	-webkit-background-size:556px 132px;
+	-moz-background-size: 556px 132px;
+	-o-background-size: 556px 132px;
+	background-size: 556px 132px;
+	}
+.banner li .img_three{
+	background:url(../image/banner2.jpg) no-repeat center;
+	-webkit-background-size:556px 132px;
+	-moz-background-size: 556px 132px;
+	-o-background-size: 556px 132px;
+	background-size: 556px 132px;
+	}
+.banner_btn {
+	height: 1.3em;
+	text-align: center;
+	background: #fff;
+}
+.banner_btn a {
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+	background: #ddd;
+	border-radius: 10px;
+	margin-right: 10px;
+}
+.banner_btn a:hover, .banner_btn .cur {
+	background: #ce261d;
+}*/
+/*S 主页公司简介*/
+.company_profile {
+	width: 100%;
+	height: 80px;
+	margin-bottom: 0.5em;
+}
+.company_title {
+	float: left;
+}
+.company_title a {
+	height: 80px;
+	width: 100px;
+	display: block;
+	background: url(../image/jianjie_title.jpg) no-repeat;
+	-webkit-background-size: 100px 80px;
+	-moz-background-size: 100px 80px;
+	-o-background-size: 100px 80px;
+	background-size: 100px 80px;
+}
+.company_photo {
+	height: 80px;
+	overflow: hidden;
+}
+.company_photo a {
+	display: block;
+	width: 100%;
+	height: 80px;
+	background: url(../image/jianjie.jpg) repeat-x;
+	-webkit-background-size: 400px 80px;
+	-moz-background-size: 400px 80px;
+	-o-background-size: 400px 80px;
+	background-size: 400px 80px;
+}
+/*E 主页公司简介*/
+/*S 走进湘商菜单*/
+.menu_c li {
+	height: 2em;
+	line-height: 2em;
+	margin-bottom: 0.3em;
+	background: #fff;
+	border-bottom: 1px solid #d6d6d6;
+}
+.menu_c .list_li {
+	margin-bottom: 0;
+	border: none;
+}
+.menu_c li a {
+	display: inline-block;
+	overflow: hidden;
+	width: 100%;
+	background: url(../image/right_jt.gif) no-repeat 95% center;
+	-webkit-background-size: 7px 11px;
+	-moz-background-size: 7px 11px;
+	-o-background-size: 7px 11px;
+	background-size: 7px 11px;
+}
+.menu_c li span {
+	display: inline-block;
+	width: 26px;
+	height: 22px;
+	float: left;
+	margin: 0.3125em 0.5em;
+	background: url(../image/icon.png) no-repeat;
+	-webkit-background-size: 22px 203px;
+	-moz-background-size: 22px 203px;
+	-o-background-size: 22px 203px;
+	background-size: 22px 203px;
+}
+.menu_c li .menu_one {
+	background-position: 0 -5px;
+}
+.menu_c li .menu_two {
+	background-position: 0 -35px;
+}
+.menu_c li .menu_three {
+	background-position: 0 -65px;
+}
+.menu_c li .menu_four {
+	background-position: 0 -101px;
+}
+.menu_c li .menu_five {
+	background-position: 0 -135px;
+}
+.menu_c li .menu_six {
+	background-position: 0 -169px;
+}
+.menu_c a i {
+	display: block;
+	height: 1px;
+	background: #d6d6d6;
+	margin-left: 40px;
+}
+/*E 走进湘商菜单*/
+/*S 联系我们和招贤纳士*/
+.contact_recruitment {
+	width: 100%;
+	overflow: hidden
+}
+.contact_recruitment li {
+	width: 50%;
+	float: left;
+}
+.contact_recruitment a {
+	display: block;
+	width: 160px;
+	height: 50px;
+	margin: 0 auto 0.3em;
+	background: url(../image/contact_recruitment.gif) no-repeat;
+	-webkit-background-size: 316px 50px;
+	-moz-background-size: 316px 50px;
+	-o-background-size: 316px 50px;
+	background-size: 316px 50px;
+}
+.contact_recruitment .right_recruitment {
+	background-position: -156px 0;
+}
+/*E 联系我们和招贤纳士*/
+/*S 湘商资讯*/
+.news {
+	background: #f0f0f0;
+	padding: 0 10px;
+}
+.news li {
+	border-bottom: 1px solid #d7d7d7;
+	padding: 10px 0;
+}
+.news li a {
+	display: block;
+}
+.news_photo {
+	width: 70px;
+	height: 55px;
+	float: left;
+}
+.news_text {
+	overflow: hidden;
+	padding-left: 10px;
+}
+.news_text h3 {
+	color: #1f1a17;
+	font-family: "黑体";
+	font-size: 0.875em;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden
+}
+.news_text p {
+	height: 35px;
+	color: #74787b;
+	font-size: 0.75em;
+	line-height: 17px;
+	overflow: hidden
+}
+/*E 湘商资讯*/
+.page_title {
+	height: 43px;
+	line-height: 43px;
+	text-align: center;
+	background: #fafafa;
+	color: #696969;
+	border-bottom: 2px solid #ce261d;
+	padding: 0 10px;
+}
+.page_title a {
+	display:block;
+	height: 43px;
+	width:43px;
+	}
+.return {
+	float: left;
+}
+.top_icon {
+	float: right;	
+}
+.return span {
+	display: block;
+	margin:11px auto;
+	width: 12px;
+	height: 21px;
+	background: url(../image/page/return.gif) no-repeat;
+	-webkit-background-size: 12px 21px;
+	-moz-background-size: 12px 21px;
+	-o-background-size: 12px 21px;
+	background-size: 12px 21px;
+	}
+.top_icon span {
+	width: 22px;
+	height: 19px;
+	display: block;
+	margin:12px auto;
+	background: url(../image/page/index.gif) no-repeat;
+	-webkit-background-size: 22px 19px;
+	-moz-background-size: 22px 19px;
+	-o-background-size: 22px 19px;
+	background-size: 22px 19px;
+	}
+.primary {
+	overflow: auto;
+	position: absolute;
+	top: 45px;
+	bottom: 0;
+	width: 100%;
+	background: #fff;
+}
+.news_title {
+	color: #454648;
+	padding: 10px 20px;
+	margin: 0 10px;
+	text-align: center;
+	font-size: 20px;
+}
+.meta {
+	text-align:center;
+	padding-bottom:5px;
+	}
+.meta span {
+	color:#7a7a7a;
+	font-size:0.75em;
+	}
+.meta .time{
+	margin-right:10px;
+	}
+.content_fontsmall {
+	padding:15px 0;
+	font-size: 0.875em;
+	margin:0 15px;
+	border-top: 1px solid #999;
+}
+.content_fontsmall p {
+	line-height: 1.8em;
+	margin-bottom: 20px;
+	text-indent: 2em;
+}
+.content_fontsmall .big_t {
+	font-weight: bold;
+	font-size: 1.2em;
+	margin-bottom: 10px;
+	text-indent: 0;
+}
+.content_fontsmall .img_t{
+	display:block;
+	text-align:center;
+	margin:10px 0 0 -2em;
+	line-height: 1.5em;
+	}
+/*S 关联单位*/
+.unit_nav {
+	height: 28px;
+	background: url(../image/page/unit.gif) repeat-x;
+	-webkit-background-size: 100% 28px;
+	-moz-background-size: 100% 28px;
+	-o-background-size: 100% 28px;
+	background-size: 100% 28px;
+	border: 1px solid #ededed;
+	padding-left: 5px;
+	margin-bottom: 20px;
+}
+.unit_nav ul {
+	padding-top: 3px;
+	overflow: hidden;
+}
+.unit_nav li {
+	width: 88px;
+	height: 26px;
+	float: left;
+	margin-right: 5px;
+}
+.unit_nav li a {
+	display: block;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+}
+ .unit_nav .current a {
+	color: #e2373d;
+	background: url(../image/page/unit_btn.gif) no-repeat;
+	-webkit-background-size: 88px 26px;
+	-moz-background-size: 88px 26px;
+	-o-background-size: 88px 26px;
+	background-size: 88px 26px;
+}
+.href_p a {
+	color: #e2373d;
+}
+#unit_content p img {
+	margin:0;
+	}
+/*E 关联单位*/
+/*S分页表格*/
+.inquiry_table{
+	width:100%;
+	margin:0 auto 20px;
+	}
+.page_froms {
+	margin:0 auto;
+	}
+.page_froms th {
+	background:url(../image/page/table_th.gif) repeat-x;
+	border:1px solid #ccc;
+	height:39px;
+	border-top:2px solid #4c5467;
+	}
+.page_froms td{
+	border:1px solid #ccc;
+	height:39px;
+	padding-left:5px;
+	word-break:break-all;
+	word-wrap:break-word;
+	line-height:22px;
+	}
+.on_td{
+	background:#f3f3f3;
+	width:70px;
+	text-align:center;
+	font-weight:bold
+	}
+.center_froms td {
+	text-align:center;
+	}
+.page_froms td a {
+	color: #e2373d;
+	}
+/*E分页表格*/
+/*S 公司业务*/
+.business li{
+	width:49%;
+	float:left;
+	background:#fff;
+	margin-bottom:5px;
+	}
+.business .business_l{
+	margin-right:5px;
+	}
+.business a{
+	display:block;
+	}
+.business a span {
+	display:block;
+	width:76px;
+	height:55px;
+	margin:30px auto 15px;
+	background:url(../image/page/business.png) no-repeat;
+	-webkit-background-size: 304px 55px;
+	-moz-background-size: 304px 55px;
+	-o-background-size: 304px 55px;
+	background-size: 304px 55px;
+	}
+.business a .two_span{
+	background-position:-76px 0;}
+.business a .three_span{
+	background-position:-152px 0;}
+.business a .four_span{
+	background-position:-228px 0;}
+.business .b_title{
+	text-align:center;
+	font-size:18px;
+	}
+.business p {
+	color:#74787b;
+	margin:15px;
+	text-indent:1em;
+	height:3.6em;
+	line-height:1.2em;
+	overflow:hidden;
+	}
+.business_wb{
+	text-align:center;}
+.business_wb p{
+	display:inline-block;}
+/*E 公司业务*/
+.hotline {
+	line-height: 2em;
+	text-align: center;
+	background: #fff;
+	color: #000;
+}
+.copyright {
+	line-height: 2em;
+	text-align: center;
+	background: #ce261d;
+	color: #fff;
+	font-family: "黑体";
+}
