@@ -1,4 +1,0 @@
-# Trader
-# Trader
-# Trader
-# Trader
