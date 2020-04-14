@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HtmlWebViewController">
+            <connections>
+                <outlet property="labelTitle" destination="Q0y-C8-yrs" id="DeA-gO-tVu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="jbi-I1-0kz" id="YU7-Ud-ch1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ml7-GR-8dr">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="外汇" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0y-C8-yrs">
+                            <rect key="frame" x="62" y="31" width="197" height="24"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9p-H5-o9L">
+                            <rect key="frame" x="0.0" y="16" width="67" height="45"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="back">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="back:" destination="-1" eventType="touchUpInside" id="s8x-Im-CMy"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="ZJg-TD-7SV"/>
+                    </constraints>
+                </view>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbi-I1-0kz">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="DBR-vr-0bb"/>
+                    </connections>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jbi-I1-0kz" firstAttribute="top" secondItem="ml7-GR-8dr" secondAttribute="bottom" id="4d4-5J-5fX"/>
+                <constraint firstItem="jbi-I1-0kz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4dI-sL-8Au"/>
+                <constraint firstAttribute="bottom" secondItem="jbi-I1-0kz" secondAttribute="bottom" id="Dhn-Wh-UnN"/>
+                <constraint firstItem="jbi-I1-0kz" firstAttribute="top" secondItem="ml7-GR-8dr" secondAttribute="bottom" id="Drv-HD-onc"/>
+                <constraint firstAttribute="trailing" secondItem="jbi-I1-0kz" secondAttribute="trailing" id="Sg5-Bq-4T3"/>
+                <constraint firstItem="ml7-GR-8dr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mO8-oa-HcJ"/>
+                <constraint firstAttribute="trailing" secondItem="ml7-GR-8dr" secondAttribute="trailing" id="vEM-t0-mVO"/>
+                <constraint firstItem="ml7-GR-8dr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ydd-bN-Svf"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="31.884057971014496" y="90.401785714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="22" height="22.5"/>
+    </resources>
+</document>
